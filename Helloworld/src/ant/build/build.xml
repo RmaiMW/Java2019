@@ -1,0 +1,34 @@
+<project default ="Test1">
+
+	<property name ="src.java.dir" location="./C:\Program Files\Git\mingw64\lib\tk8.6\demos\helo"/>
+	<property name ="src.test.dir" location="./src/main/test"/>
+	<property name ="result.dir" location="./target"/>
+	<property name ="result.javaclasses.dir" location="${result.dir}/classes"/>
+	<property name ="result.testclasses.dir" location="${result.dir}/testclasses"/>
+	<property name ="result.jar.file" location="./MyProducts.jar"/>
+
+
+
+
+	
+    <target name="delete">
+    	<delete dir="bin" />
+    	<delete dir="src" />
+    	<delete dir="lib" />
+    </target>
+
+  <target name= "Test1" depends="delete">
+	<mkdir dir ="bin"/>
+	<mkdir dir ="src"/>
+	<mkdir dir ="lib"/>
+  	<mkdir dir="${result.javaclasses.dir}"/>
+  	
+  </target>
+	
+	<target name="jar" depends="Test1">
+		<jar destfile="${result.jar.file}">
+			<fileset dir="${result.javaclasses.dir}">
+				</fileset>
+			</jar>
+	</target>
+</project>
