@@ -10,15 +10,8 @@
 
 
 
-	
-    <target name="delete">
-    	<delete dir="bin" />
-    	<delete dir="src" />
-    	<delete dir="lib" />
-    	<delete dir="${result.javaclasses.dir}" />
-    </target>
 
-  <target name= "compile" depends="delete">
+  <target name= "compile" >
 	<mkdir dir ="bin"/>
 	<mkdir dir ="src"/>
 	<mkdir dir ="lib"/>
