@@ -1,4 +1,4 @@
-<project default ="Test1">
+<project default ="compile">
 
 	<property name ="src.java.dir" location="./C:\Program Files\Git\mingw64\lib\tk8.6\demos\helo"/>
 	<property name ="src.test.dir" location="./src/main/test"/>
@@ -15,20 +15,24 @@
     	<delete dir="bin" />
     	<delete dir="src" />
     	<delete dir="lib" />
+    	<delete dir="${result.javaclasses.dir}" />
     </target>
 
-  <target name= "Test1" depends="delete">
+  <target name= "compile" depends="delete">
 	<mkdir dir ="bin"/>
 	<mkdir dir ="src"/>
 	<mkdir dir ="lib"/>
   	<mkdir dir="${result.javaclasses.dir}"/>
-  	
   </target>
 	
-	<target name="jar" depends="Test1">
+	<target name="jar" depends="compile">
+
+	  	<javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true" includeantruntime="false">
+	  	</javac>
 		<jar destfile="${result.jar.file}">
 			<fileset dir="${result.javaclasses.dir}">
 				</fileset>
 			</jar>
+		
 	</target>
 </project>
