@@ -6,12 +6,15 @@
 	<property name ="result.javaclasses.dir" location="${result.dir}/classes"/>
 	<property name ="result.testclasses.dir" location="${result.dir}/testclasses"/>
 	<property name ="result.jar.file" location="./MyProducts.jar"/>
+	
+    <target name="delete">
+    	<delete dir="bin" />
+    	<delete dir="src" />
+    	<delete dir="lib" />
+    	<delete dir="${result.javaclasses.dir}" />
+    </target>
 
-
-
-
-
-  <target name= "compile" >
+  <target name= "compile" depends="delete">
 	<mkdir dir ="bin"/>
 	<mkdir dir ="src"/>
 	<mkdir dir ="lib"/>
