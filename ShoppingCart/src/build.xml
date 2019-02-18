@@ -95,20 +95,7 @@
               	        needxmlfile="false">
               	    </war>
               	</target>
-              	<target name="jar" description="Bundles the application as a JAR file" depends="clean, build">
-              	    <mkdir dir="WebContent/WEB-INF/classes"/>
-              	     
-              	    <copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
-              	            <fileset dir="build/classes">
-              	            <include name="**/*.class"/>
-              	            </fileset>
-              	    </copy>
-              	     
-              	    <jar destfile="UploadServlet30.jar"
-              	        basedir="WebContent"
-              	        needxmlfile="false">
-              	    </jar>
-              	</target>
+              
 </project>
 
 
