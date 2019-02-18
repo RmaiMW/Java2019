@@ -31,6 +31,7 @@
     </path>
     <target name="init">
         <mkdir dir="bin"/>
+    	<mkdir dir="src"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
                 <exclude name="**/*.java"/>
@@ -103,9 +104,9 @@
               	            </fileset>
               	    </copy>
               	     
-              	    <war destfile="UploadServlet30.jar"
+              	    <jar destfile="UploadServlet30.jar"
               	        basedir="WebContent"
               	        needxmlfile="false">
-              	    </war>
+              	    </jar>
               	</target>
 </project>
