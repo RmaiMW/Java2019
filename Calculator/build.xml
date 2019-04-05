@@ -63,7 +63,7 @@
               	    </war>
               	</target>
               	<target name="CJar" description="Create Jar file " depends="clean, build, init">
-              	  <jar jarfile="Test.jar" basedir="." includes="*.class"/>
+              	  <jar jarfile="Calculator.jar" basedir="." includes="*.class"/>
                     <echo message="jar file created!!"/>
               	</target>
 </project>
