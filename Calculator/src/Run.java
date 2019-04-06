@@ -14,15 +14,15 @@ public class Run {
 
             public void run() {
 
-//                Model model = new Model();
-//                View view = new View(model);
-//                Controller controller = new Controller(model, view);
-//                model.addObserver(view);
-                //for view2 Toggle the comments down below
                 Model model = new Model();
-                View2 vieww = new View2(model);
-                Controller controller = new Controller(model, vieww);
-                model.addObserver(vieww);
+                View view = new View(model);
+                Controller controller = new Controller(model, view);
+                model.addObserver(view);
+//                //for view2 Toggle the comments down below
+//                Model model = new Model();
+//                View2 vieww = new View2(model);
+//                Controller controller = new Controller(model, vieww);
+//                model.addObserver(vieww);
 
             }
         });
